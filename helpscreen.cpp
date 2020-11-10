@@ -7,7 +7,7 @@
 
 help::help(float width , float height)
 {
-    sf::RenderWindow helpwindow(sf::VideoMode(200, 200), "HELP");
+    sf::RenderWindow helpwindow(sf::VideoMode(800, 800), "HELP");
     sf::Texture texture;
 
     if (!texture.loadFromFile("/home/shreem/Downloads/whiteKnight.png"))
