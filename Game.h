@@ -18,12 +18,12 @@ public:
 private:
     //sf::Event event;
     sf::Font fonts;
-	sf::Texture texknight ;
-	sf::Sprite knight;
+	sf::Texture texknight , texprincess;
+	sf::Sprite knight , princess;
 	float gridSizef = 110;
 	//int box[8][8];
-    int posX=3 ,posY=3; //destX=,destY=;
+    int posX=0 ,posY=0 , destX=7 ,destY=6 ;
     float kposX , kposY;
-    int moves=60;
+    int moves=5;
 };
 
