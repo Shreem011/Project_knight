@@ -5,23 +5,6 @@
 #include<SFML/System.hpp>
 #include<iostream>
 
-//float gridSizef = 110;
-
-bool gamescreen::valid(int i , int j)
-{
-    for(int i=0 ; i<8 ; i++)
-    {
-        for(int j=0 ; j<8 ; j++)
-        {
-            if (i < 0 || i >= 8 || j < 0 || j >= 8) //border
-                return false;
-            else
-                return true;
-        }
-    }
-}
-
-
 gamescreen::gamescreen(float width , float height)
 {
     //float gridSizef = 110;
@@ -39,6 +22,15 @@ gamescreen::gamescreen(float width , float height)
 	knight.setTexture(texknight);
     knight.setPosition(static_cast<float>(posX*gridSizef) , static_cast<float>(posY*gridSizef));
     //knight.setOrigin(0.f , 0.f);
+
+
+    if (!texprincess.loadFromFile("/home/shreem/Downloads/princess.png" , sf::IntRect(0,50,110,150)))
+	{
+		//std::cout << "Error loading paddle texture :(" << std::endl;
+	}
+	princess.setTexture(texprincess);
+    princess.setPosition(static_cast<float>(destX*gridSizef) , static_cast<float>(destY*gridSizef));
+
 
     //drawing chessboard
     sf::RectangleShape tileMap[8][8];
@@ -142,7 +134,7 @@ gamescreen::gamescreen(float width , float height)
 
         //displaying knight on chessboard
         gamewindow.draw(knight);
-
+        gamewindow.draw(princess);
         //display everything on window
         gamewindow.display();
     }
