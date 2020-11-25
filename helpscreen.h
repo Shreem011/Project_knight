@@ -1,8 +1,9 @@
 #pragma once
+
 #include "SFML/Graphics.hpp"
 #include<iostream>
+
 using namespace std;
-typedef unsigned char Uint8;
 
 class help
 {
