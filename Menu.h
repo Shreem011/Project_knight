@@ -19,8 +19,7 @@ private:
 	int selectedItemIndex;
 	sf::Font font;
 	sf::Texture texture;
-	//sf::Sprite sprite;
 	sf::Text menu[MAX_NUMBER_OF_ITEMS];
 
 };
-//home/shreem/Downloads/PngItem_71553.png
+
