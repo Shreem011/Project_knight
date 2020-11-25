@@ -10,7 +10,8 @@ help::help(float width , float height)
     sf::RenderWindow helpwindow(sf::VideoMode(800, 800), "HELP");
     sf::Texture texture;
 
-    if (!texture.loadFromFile("/home/shreem/Downloads/whiteKnight.png"))
+    //helpscreen background
+    if (!texture.loadFromFile("/home/shreem/Downloads/wallpaper.png"))
 	{
 		std::cout << "Error loading paddle texture :(" << std::endl;
 	}
